@@ -10,7 +10,7 @@ variable "network" {
     name     = "myTfSegment"
     cidr = "10.7.99.0/24"
     transportZone = "N1_TZ_nested_nsx-overlay"
-    tier1 = "N1-T1_AVI-VIP-A"
+    tier1 = "myTftier1"
     networkRangeBegin = "11" # for NSX-T segment if DHCP enabled
     networkRangeEnd = "50" # for NSX-T segment if DHCP enabled
     type = "V4" # for Avi
