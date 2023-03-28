@@ -26,7 +26,7 @@ variable "network" {
   type = map
   default = {
     name                       = "myTfSegment"
-    cidr                       = "10.7.99.0/24"
+    cidr                       = "10.32.23.1/24"
     transportZone              = "db-tz-1216"
     tier1                      = "qa-t1-01"
     networkRangeBegin          = "11" # for NSX-T segment if DHCP enabled
