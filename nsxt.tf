@@ -2,8 +2,8 @@ data "nsxt_policy_transport_zone" "tz" {
   display_name = var.network.transportZone
 }
 
-data "nsxt_policy_tier1_gateway" "tier1_router" {
-  display_name = var.network.tier1
+data "nsxt_policy_tier0_gateway" "tier0_router" {
+  display_name = var.network.tier0
 }
 
 
@@ -21,7 +21,7 @@ data "nsxt_policy_tier1_gateway" "tier1_router" {
 
 resource "nsxt_policy_segment" "networkBackend" {
   display_name        = var.network["name"]
-  connectivity_path   = data.nsxt_policy_tier1_gateway.tier1_router.path
+  connectivity_path   = data.nsxt_policy_tier0_gateway.tier0_router.path
   transport_zone_path = data.nsxt_policy_transport_zone.tz.path
   #domain_name         = "runvmc.local"
   description         = "Network Segment built by Terraform"
