@@ -27,8 +27,8 @@ variable "network" {
   default = {
     name                       = "myTfSegment"
     cidr                       = "10.32.24.1/24"
-    transportZone              = "qa-edge-uplink-tz"
-    tier0                      = "qa-t0-01 "
+    transportZone              = "morpheus-vlan-tz"
+    tier0                      = "qa-t0-01"
     networkRangeBegin          = "11" # for NSX-T segment if DHCP enabled
     networkRangeEnd            = "50" # for NSX-T segment if DHCP enabled
     type                       = "V4" # for Avi
