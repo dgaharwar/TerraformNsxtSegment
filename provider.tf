@@ -9,9 +9,9 @@ terraform {
 }
 
 provider "nsxt" {
-  host                     = var.host
-  username                 = var.username
-  password                 = var.password
+  host                     = var.nsxt_host
+  username                 = var.nsxt_username
+  password                 = var.nsxt_password
   allow_unverified_ssl     = true
   max_retries              = 10
   retry_min_delay          = 500
