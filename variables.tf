@@ -1,7 +1,7 @@
 variable "nsxt_host" {}
 variable "nsxt_username" {}
 variable "nsxt_password" {}
-variable nsxt_segment_name {
+variable "nsxt_segment_name" {
    type = string
    default = ""
 }
