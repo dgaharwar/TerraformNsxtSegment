@@ -1,12 +1,6 @@
 variable "nsxt_host" {}
 variable "nsxt_username" {}
 variable "nsxt_password" {}
-variable "nsxt_segment_name" {
-   type = string
-   default = ""
-}
-
-
 
 #variable "network" {
 #  type = map
@@ -29,7 +23,7 @@ variable "nsxt_segment_name" {
 variable "network" {
   type = map
   default = {
-    name                       = var.nsxt_segment_name
+    name                       = "myTfSegment"
     cidr                       = "10.32.24.1/24"
     transportZone              = "morpheus-vlan-tz"
     tier0                      = "qa-t0-01"
